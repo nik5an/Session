@@ -22,19 +22,22 @@
         </form>
     }
 
-  
+    <h2 style="color: #4CAF50; margin-top: 30px;">Изберете предпочитание на тема:</h2>
+
+    <form asp-action="SetCookie" method="post" style="margin-top: 20px;">
+        <button type="submit" name="preference" value="DarkMode"
+                style="background-color: #333; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
+            Тъмна тема
+        </button>
+        <button type="submit" name="preference" value="LightMode"
+                style="background-color: #f9f9f9; color: #333; padding: 10px 20px; border: 1px solid #ccc; border-radius: 5px; cursor: pointer;">
+            Светла тема
+        </button>
+    </form>
+
     <p style="margin-top: 20px; font-size: 1.1em; color: #555;">
         Вашата текуща тема: <strong>@ViewBag.UserPreference</strong>
     </p>
 </div>
 
-}
 
-<h2>Изберете предпочитание на тема:</h2>
-
-<form asp-action="SetCookie" method="post">
-    <button type="submit" name="preference" value="DarkMode">Тъмна тема</button>
-    <button type="submit" name="preference" value="LightMode">Светла тема</button>
-</form>
-
-<p>Вашата текуща тема: @ViewBag.UserPreference</p>
